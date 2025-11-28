@@ -1,0 +1,136 @@
+.container {
+  height: auto;
+  padding: 50px 5%;
+  text-align: center;
+  background: #fff;
+  margin-top: 40px;
+  color: rgb(197, 105, 31);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.container h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: rgb(249, 238, 218);
+  border-radius: 20px;
+  width: 30%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  transform: scale(1.03);
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 0;
+  left: 100%; /* Start from right */
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.slide.active {
+  left: 0; /* Move into view */
+  opacity: 1;
+}
+
+.slide:not(.active) {
+  left: -100%; /* Move left out */
+}
+
+
+.title{
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* BUTTONS */
+.prev,
+.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px 12px;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+.box:hover .prev,
+.box:hover .next {
+  opacity: 1;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.text h2{
+  margin-top: 80px;
+}
+@media (max-width: 768px){
+  .box{
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .container{
+    margin-top: 5px;
+  }
+}

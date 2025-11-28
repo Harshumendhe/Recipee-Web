@@ -1,0 +1,95 @@
+.download-section {
+  text-align: center;
+  padding: 60px 10%;
+  background: #fff9f0;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-top: 2px solid #f1d09a;
+}
+
+.download-section h2 {
+  font-size: 2rem;
+  color: #d57c25;
+  margin-bottom: 10px;
+}
+
+.download-section p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.download-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Playstore Button */
+.playstore-btn {
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 226);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 157, 46, 0.8);
+}
+
+.playstore-btn:hover {
+  transform: scale(1.05);
+  background: #d8dbff;
+}
+
+.play-icon {
+  font-size: 4rem;
+  margin-right: 10px;
+  color: #51ac5d;
+  margin-top: -10px;
+}
+
+.play-text {
+  font-size: 0.7rem;
+  margin-top: 0px;
+  color: #000000;
+}
+
+.playstore-btn h4 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: black;
+}
+
+/* App Info */
+.app-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.downloads {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.star {
+  color: #ffb400;
+}
+
+.half {
+  opacity: 0.7;
+}
+
+.reviews span {
+  font-size: 0.9rem;
+  color: #555;
+}

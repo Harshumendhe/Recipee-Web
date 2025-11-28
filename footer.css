@@ -1,0 +1,66 @@
+.footer {
+  background: rgb(255, 235, 197);
+  display: flex;
+  justify-content: space-between; /* left, center, right */
+  align-items: center;            /* vertical center */
+  padding: 15px 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  
+}
+
+/* Left */
+.copyright {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Center */
+.made-with {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+.made-with i.fa-heart {
+  color: red;
+  margin: 0 5px;
+}
+
+/* Right */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #ff7043; /* hover effect */
+}
+
+@media (max-width:768px){
+  .made-with {
+  font-size: 0.6rem;
+}
+.copyright {
+  font-size: 0.5rem;
+}
+.footer{
+  margin-bottom: 20px;
+}
+.social-icons i {
+  font-size: 1rem;
+  margin-right: -7px;
+
+}
+.made-with i.fa-heart {
+  color: red;
+  margin: 0 1px;
+}
+}

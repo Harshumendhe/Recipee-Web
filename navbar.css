@@ -1,0 +1,213 @@
+.flex-div {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 3%;
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 157, 46, 0.8);
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  height: 60px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  max-width: 350px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background-color: rgb(255, 172, 72);
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 24px;
+  color: rgb(173, 88, 17);
+  cursor: pointer;
+  display: none;
+  position: relative;
+  z-index: 12;
+}
+
+/* =====================
+   Menu Links
+===================== */
+.bar a {
+  text-decoration: none;
+  color: rgb(173, 88, 17);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover effect */
+.bar a:hover {
+  color: orange;
+  background-color: rgba(255, 157, 46, 0.1);
+  box-shadow: 0 0 8px rgba(255, 157, 46, 0.3);
+}
+
+/* Active link (NavLink auto adds 'active' class) */
+.bar a.active {
+  color: orange !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid orange !important;
+  padding-bottom: 3px;
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .search-box {
+    max-width: 220px;
+  }
+
+  .logo {
+    width: 130px;
+    height: 50px;
+  }
+
+  .bar a {
+    font-size: 14px;
+    gap: 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: -20px;
+    width: 100px;
+    height: 50px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Menu below navbar */
+  .bar {
+    position: absolute;
+    top: 75px;
+    right: 3%;
+    flex-direction: row;
+    gap: 2px;
+    font-size: 11px;
+    display: none;
+    background: white;
+    padding: px 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 157, 46, 0.4);
+    z-index: 11;
+  }
+
+  .bar.open {
+    display: flex;
+  }
+
+  .bar a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  /* Mobile search box */
+  .search-box {
+    flex: none;
+    width: 190px;
+    margin-left: -19px;
+  }
+
+  .search-box button {
+    display: none;
+  }
+
+  /* FontAwesome search icon after input */
+  .search-box::after {
+    content: "\f002"; /* FontAwesome search */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    background: orange;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    padding: 5px;
+  }
+}
+
+/* Active link underline */
+.bar a.active {
+  color: orange !important;
+  font-weight: 700 !important;
+  position: relative; /* underline ke liye relative */
+  padding-bottom: 3px;
+}
+
+/* Smooth underline */
+.bar a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+  background-color: orange;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Show underline when active */
+.bar a.active::after {
+  transform: scaleX(1);
+}
